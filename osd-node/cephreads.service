@@ -1,0 +1,10 @@
+[Unit]
+Description=Ceph Health LED Monitor
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /root/cephreads.py
+
+[Install]
+WantedBy=multi-user.target
